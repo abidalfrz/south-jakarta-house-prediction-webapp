@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Jakarta House Price Predictor</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-glass mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">
+                <i class="bi bi-house-heart-fill me-2"></i>House<span class="text-warning">AI</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container flex-grow-1 d-flex align-items-center justify-content-center">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="position-fixed top-0 start-50 translate-middle-x mt-5" style="z-index: 1050; min-width: 320px;">
+                {% for category, message in messages %}
+                    
+                    {% set alert_class = 'danger' if category == 'error' else 'info' if category == 'message' else category %}
+
+                    <div class="alert alert-{{ alert_class }} alert-dismissible fade show shadow-lg d-flex align-items-center" role="alert">
+                        
+                        {% if alert_class == 'success' %}
+                            <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+                        {% elif alert_class == 'danger' %}
+                            <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                        {% elif alert_class == 'warning' %}
+                            <i class="bi bi-exclamation-circle-fill me-2 fs-5"></i>
+                        {% else %}
+                            <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                        {% endif %}
+
+                        <div>{{ message }}</div>
+                        
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="text-center text-white py-3 mt-4">
+        <p>&copy; South Jakarta House Predictor.
+        <br>Developed by Muhammad Abid Baihaqi Al Faridzi</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+*.npy
+catboost_info/
+_pycache_/

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-md-8 col-lg-6 fade-in">
+    <div class="glass-card p-4 p-md-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">Input Specifications</h2>
+            <p class="text-muted">Enter the property details below</p>
+        </div>
+
+        <form action="{{ url_for('predict') }}" method="POST" id="predictForm">
+            
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Property Name / Location / Keyword</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light"><i class="bi bi-geo-alt-fill text-primary"></i></span>
+                    <input type="text" name="nama_rumah" class="form-control" placeholder="e.g., Tebet Timur" required>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Land Area (m²)</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-arrows-fullscreen text-success"></i></span>
+                        <input type="number" step="any" name="luas_tanah" class="form-control" placeholder="0" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Building Area (m²)</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-house-door text-success"></i></span>
+                        <input type="number" step="any" name="luas_bangunan" class="form-control" placeholder="0" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-4">
+                    <label class="form-label small fw-semibold text-center w-100">Bedrooms</label>
+                    <div class="input-group">
+                        <span class="input-group-text px-2"><i class="bi bi-moon-stars"></i></span>
+                        <input type="number" name="kamar_tidur" class="form-control text-center px-1" value="1" min="1" required>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label class="form-label small fw-semibold text-center w-100">Bathrooms</label>
+                    <div class="input-group">
+                        <span class="input-group-text px-2"><i class="bi bi-droplet"></i></span>
+                        <input type="number" name="kamar_mandi" class="form-control text-center px-1" value="1" min="1" required>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label class="form-label small fw-semibold text-center w-100">Garage</label>
+                    <div class="input-group">
+                        <span class="input-group-text px-2"><i class="bi bi-car-front"></i></span>
+                        <input type="number" name="garasi" class="form-control text-center px-1" value="0" min="0" required>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <button type="submit" class="btn btn-gradient w-100 py-3 rounded-pill fw-bold" id="btnSubmit">
+                <i class="bi bi-calculator me-2"></i>Calculate Estimation
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
