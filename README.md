@@ -95,9 +95,11 @@ To run this project on your local machine, follow these steps:
 
 ### 1. Clone the Repository
 
+Open your terminal and run the following command:
+
 ```bash
 git clone https://github.com/abidalfrz/south-jakarta-house-prediction-webapp.git
-
+cd south-jakarta-house-prediction-webapp
 ```
 
 ### 2. Create a Virtual Environment
