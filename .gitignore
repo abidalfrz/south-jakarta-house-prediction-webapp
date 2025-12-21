@@ -1,3 +1,4 @@
 *.npy
 catboost_info/
 _pycache_/
+.vscode/
