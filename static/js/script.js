@@ -23,15 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    alerts.forEach(function(alertElement) {
-        setTimeout(function() {
+    setTimeout(function() {
+        let alerts = document.querySelectorAll('.alert');
+        alerts.forEach(function(alert) {
             if (typeof bootstrap !== 'undefined') {
-                const bsAlert = new bootstrap.Alert(alertElement);
+                let bsAlert = new bootstrap.Alert(alert);
                 bsAlert.close();
-            } else {
-                alertElement.style.display = 'none';
             }
-        }, 5000); 
-    });
+        });
+    }, 5000);
 
 });
