@@ -124,7 +124,7 @@ python app.py
 ```
 
 ### 5. Access the Application
-Open your web browser and navigate to `http://localhost:5000` to access the Smart Expense Tracker application.
+Open your web browser and navigate to `http://localhost:5000` to access the house price prediction web app.
 
 1. Click on "Start Prediction".
 2. Fill in the property details in the form.
