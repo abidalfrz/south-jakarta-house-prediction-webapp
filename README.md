@@ -83,7 +83,7 @@ You can access the original dataset and description through the link below:
 
 🔗[Daftar Harga Rumah](https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah/data)
 
-We would like to acknowledge and thank the dataset creator for making this resource publicly available for research and educational use.
+We would like to acknowledge and thanks to the dataset creator for making this resource publicly available for research and educational use.
 
 ---
 
