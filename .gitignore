@@ -2,3 +2,4 @@
 catboost_info/
 _pycache_/
 .vscode/
+*.pth

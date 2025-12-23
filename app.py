@@ -29,11 +29,17 @@ def predict():
             prediction = predictor.predict(X)[0]
             prediction = np.expm1(prediction)  # Inverse of log1p transformation
             flash('Prediction successful!', 'success')
-            return render_template('result.html', price=prediction)
+            return redirect(url_for('result', price=int(prediction)))
         except Exception as e:
             flash(f'Error occurred: {str(e)}', 'error')
             return redirect(url_for('home'))
     return render_template('predict.html')
+
+@app.route('/result', methods=['GET'])
+def result():
+    price = request.args.get('price', default=0, type=int)
+
+    return render_template('result.html', price=price)
 
 if __name__ == '__main__':
     app.run(debug=True)
