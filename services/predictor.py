@@ -9,6 +9,7 @@ class PricePredictor:
             self.model = pickle.load(f)
 
     def predict(self, X):
-        return self.model.predict(X)
+        pred = self.model.predict(X)
+        return np.expm1(pred)  # Inverse of log1p transformation
     
 predictor = PricePredictor()

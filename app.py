@@ -27,7 +27,6 @@ def predict():
             df = pd.DataFrame([data])
             X = preprocess_data(df)
             prediction = predictor.predict(X)[0]
-            prediction = np.expm1(prediction)  # Inverse of log1p transformation
             flash('Prediction successful!', 'success')
             return redirect(url_for('result', price=int(prediction)))
         except Exception as e:
