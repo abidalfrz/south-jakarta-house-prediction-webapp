@@ -82,7 +82,7 @@ south-jakarta-house-prediction-webapp/
 
 ---
 
-## 🔁 Machine Learning Workflow
+## 🔁 Workflow
 
 1. **Data Collection**: The dataset "DATA RUMAH.xlsx" contains various features (text & numeric) of houses in South Jakarta.
 2. **Exploratory Data Analysis (EDA)**: Conducted in `eda.ipynb` to understand data distributions and relationships.
