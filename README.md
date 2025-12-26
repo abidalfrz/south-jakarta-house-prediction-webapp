@@ -42,7 +42,7 @@ The dataset contains the following features:
 
 ## 📁 Project Structure
 
-```
+```bash
 south-jakarta-house-prediction-webapp/
 │
 ├── artifacts/              # Trained ML models and preprocessors
