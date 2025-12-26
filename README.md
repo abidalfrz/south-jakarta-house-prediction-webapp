@@ -4,7 +4,7 @@ This repository contains a Machine Learning-based web application designed to pr
 
 ---
 
-## 🧠 Features
+## 🧠 Features (Webapp)
 
 - House Price Prediction: Utilizes a Voting Regressor model combining Random Forest, Gradient Boosting, and XGBoost for accurate predictions.
 - Easy-to-Use Interface: Simple web interface for users to input property details and receive price estimates.
@@ -12,7 +12,23 @@ This repository contains a Machine Learning-based web application designed to pr
 
 ---
 
+## 📊 Features (Dataset)
+
+The dataset contains the following features:
+
+| Feature Name                   | Description                                         | Type         |
+|-------------------------------|-----------------------------------------------------|--------------|
+| `nama_rumah`                 | Name of the house                                   | Text         |
+| `luas_tanah`                | Land area in square meters                          | Numeric      |
+| `luas_bangunan`             | Building area in square meters                      | Numeric      |
+| `kamar_tidur`               | Number of bedrooms                                  | Numeric      |
+| `kamar_mandi`               | Number of bathrooms                                 | Numeric      |
+| `garasi`                    | Number of garages                                  | Numeric      |
+
+---
+
 ## 🛠️ Tech Stack
+
 - **Python**
 - **Flask**
 - **scikit-learn**
@@ -67,6 +83,7 @@ south-jakarta-house-prediction-webapp/
 ---
 
 ## 🔁 Machine Learning Workflow
+
 1. **Data Collection**: The dataset "DATA RUMAH.xlsx" contains various features (text & numeric) of houses in South Jakarta.
 2. **Exploratory Data Analysis (EDA)**: Conducted in `eda.ipynb` to understand data distributions and relationships.
 3. **Data Preprocessing**: Handled in `eda.ipynb` and `preprocessing.py` to clean and transform data for modeling.
