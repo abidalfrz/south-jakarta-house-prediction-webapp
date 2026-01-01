@@ -29,17 +29,25 @@ The dataset contains the following features:
 
 ## 🛠️ Tech Stack
 
-- **Python**
-- **Flask**
-- **scikit-learn**
-- **Pandas**
-- **NumPy**
-- **XGBoost**
-- **LightGBM**
-- **CatBoost**
-- **Bootstrap 5**
-- **Jupyter Notebooks**
-- **JavaScript**
+### Backend:
+
+- **Language:** Python
+- **Framework:** Flask
+
+### Frontend:
+
+- **Framework:** Flask (Jinja2 Templates) & Bootstrap 5
+- **Styling:** CSS & JavaScript
+
+### Data Science & ML:
+
+- **Data Handling:** Pandas
+- **Numerical Computing:** NumPy
+- **Machine Learning Algorithms:** scikit-learn, XGBoost, LightGBM, CatBoost
+
+### Experiments:
+
+- **Experimentation:** Jupyter Notebooks
 
 ---
 
