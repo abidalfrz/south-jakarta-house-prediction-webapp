@@ -43,10 +43,10 @@ The dataset contains the following features:
 
 - **Data Handling:** Pandas
 - **Numerical Computing:** NumPy
+- **Data Visualization:** Matplotlib & Seaborn
 - **Machine Learning Algorithms:** scikit-learn, XGBoost, LightGBM, CatBoost
 
 ### Experiments:
-
 - **Experimentation:** Jupyter Notebooks
 
 ---
