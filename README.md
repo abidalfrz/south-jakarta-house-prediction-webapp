@@ -34,6 +34,9 @@ The dataset contains the following features:
 - **scikit-learn**
 - **Pandas**
 - **NumPy**
+- **XGBoost**
+- **LightGBM**
+- **CatBoost**
 - **Bootstrap 5**
 - **Jupyter Notebooks**
 - **JavaScript**
